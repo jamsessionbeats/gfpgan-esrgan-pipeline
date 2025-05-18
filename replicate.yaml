@@ -1,9 +1,22 @@
-name: seu-usuario/gfpgan-esrgan-pipeline
-description: Pipeline que combina GFPGAN com ESRGAN para restaurar e melhorar a resolução de imagens faciais.
+build:
+  gpu: true
+  system_packages:
+    - "ffmpeg"
+  python_version: "3.10"
+  python_packages:
+    - "torch==2.2.2"
+    - "torchvision==0.17.2"
+    - "numpy"
+    - "pillow"
+    - "replicate"
+    - "requests"
+
 input:
   image:
     type: string
-    description: URL da imagem de entrada
-    required: true
+    description: "URL da imagem"
+
 output:
   type: string
+
+predict: "predict.py:Predictor"
