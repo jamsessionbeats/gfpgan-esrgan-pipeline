@@ -1,0 +1,9 @@
+name: seu-usuario/gfpgan-esrgan-pipeline
+description: Pipeline que combina GFPGAN com ESRGAN para restaurar e melhorar a resolução de imagens faciais.
+input:
+  image:
+    type: string
+    description: URL da imagem de entrada
+    required: true
+output:
+  type: string
